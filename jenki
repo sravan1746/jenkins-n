@@ -1,0 +1,17 @@
+pipe line {
+    
+    agent any
+       stages {
+           stage {
+               steps('Build') {
+                   echo 'packages of java files'
+               }
+                
+           }
+           stage {
+               steps('Tester'){
+                     echo 'packages of jenkins files'
+                    }  
+               }    
+       }
+ }     
