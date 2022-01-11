@@ -1,17 +1,23 @@
 pipe line {
-    
-    agent any
-       stages {
-           stage {
-               steps('Build') {
-                   echo 'packages of java files'
-               }
-                
-           }
-           stage {
-               steps('Tester'){
-                     echo 'packages of jenkins files'
-                    }  
-               }    
-       }
- }     
+   
+   agent any
+      stages {
+          stage {
+             steps(Test) {
+               echo'Im the creatot of the wolf worl'
+             }
+          }
+          stage {
+             steps(Build) {
+               echo'Im the creatot of the wolf worl'
+             }
+          }
+          stage {
+             steps(Deploy) {
+               echo'Im the creatot of the wolf worl'
+             }
+          }     
+     }
+       
+}      
+
